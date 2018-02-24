@@ -1,20 +1,14 @@
-package com.londonappbrewery.flashchatnewfirebase;
+package com.neo6666666.flashchatnewfirebase;
 
-import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
-
-
 
 
 public class LoginActivity extends AppCompatActivity {
@@ -29,8 +23,8 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        mEmailView = (AutoCompleteTextView) findViewById(R.id.login_email);
-        mPasswordView = (EditText) findViewById(R.id.login_password);
+        mEmailView = findViewById(R.id.login_email);
+        mPasswordView = findViewById(R.id.login_password);
 
         mPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
@@ -55,7 +49,7 @@ public class LoginActivity extends AppCompatActivity {
 
     // Executed when Register button pressed
     public void registerNewUser(View v) {
-        Intent intent = new Intent(this, com.londonappbrewery.flashchatnewfirebase.RegisterActivity.class);
+        Intent intent = new Intent(this, com.neo6666666.flashchatnewfirebase.RegisterActivity.class);
         finish();
         startActivity(intent);
     }
